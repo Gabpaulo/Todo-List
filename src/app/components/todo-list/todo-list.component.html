@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar style="--background: #ff577f;">
+    <ion-title style="color: #ffffff;">To-Do List</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" style="--background: #ffe4e1;">
+  <ion-item>
+    <ion-input
+      type="text"
+      placeholder="Enter a new task"
+      [(ngModel)]="newTask"
+      style="color: #ff577f;"
+    ></ion-input>
+    <ion-button (click)="addTask()" color="light">Add</ion-button>
+  </ion-item>
+
+  <div class="task-list">
+    <div class="task-box" *ngFor="let task of tasks">
+      <div class="task-content">
+        <ion-checkbox [(ngModel)]="task.completed"></ion-checkbox>
+        <p [class.completed]="task.completed">{{ task.name }}</p>
+      </div>
+
+
+      <div class="task-actions">
+        <ion-button fill="solid" color="ECBDD2" (click)="openEditTaskModal(task)">
+          Edit
+        </ion-button>
+        <ion-button fill="solid" color="F4E1E5" (click)="deleteTask(task)">
+          Delete
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

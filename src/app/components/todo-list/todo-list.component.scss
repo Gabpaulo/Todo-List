@@ -1,0 +1,136 @@
+/* General Styles */
+
+
+
+
+/* Page Background */
+ion-content {
+    --background: #ffe4e1; /* Light pink background */
+  }
+  
+  /* Header Styling */
+  ion-toolbar {
+    --background: #ff577f; /* Dark pink for the header background */
+    color: #ffffff; /* White text for contrast */
+  }
+  
+  /* General Styles */
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between task boxes */
+  }
+  
+  /* Task Box Styling */
+  .task-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    background: var(--pink, #ff8ba7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow-wrap: break-word;
+  }
+  
+  .task-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    background: #ff577f; /* Change to darker pink on hover */
+  }
+
+
+
+
+:host {
+    --pink-light: #ffe4e1;
+    --pink: #ff8ba7;
+    --pink-dark: #ff577f;
+    --pink-darker: #ff2e63;
+    --white: #ffffff;
+  
+    display: block;
+    background-color: var(--pink-light);
+    height: 100%;
+  }
+  
+  /* Task List Container */
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between task boxes */
+  }
+  
+  /* Task Box Styling */
+  .task-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    background: var(--pink);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow-wrap: break-word;
+    color: var(--white);
+  }
+  
+  .task-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    background: var(--pink-dark);
+  }
+  
+  /* Task Content Styling */
+  .task-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .task-content p {
+    flex: 1;
+    margin: 0;
+    font-size: 16px;
+    color: var(--white);
+    word-wrap: break-word;
+  }
+  
+  .task-content p.completed {
+    text-decoration: line-through;
+    color: var(--pink-light);
+  }
+  
+  /* Task Actions */
+  .task-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    gap: 10px;
+  }
+  
+  /* Button Styling */
+  ion-button {
+    --border-radius: 8px;
+    font-weight: bold;
+  }
+  
+  ion-button[color="primary"] {
+    --background: var(--pink-dark);
+    --color: var(--white);
+    --background-hover: var(--pink-darker);
+  }
+  
+  ion-button[color="danger"] {
+    --background: var(--pink-darker);
+    --color: var(--white);
+    --background-hover: #d91e50; /* Slightly darker shade for hover */
+  }
+  
+  ion-checkbox {
+    --size: 20px;
+    --background: var(--pink-light);
+    --checkmark-color: var(--pink-darker);
+  }
+  
